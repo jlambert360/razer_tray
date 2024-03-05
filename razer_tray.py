@@ -192,6 +192,16 @@ class MyFrame(wx.Frame):
     def show_battery(self):
         self.battery = get_battery()
         logging.info(f"Battery level obtained: {self.battery}")
+        if any(char.isdigit() for char in self.battery) == False:
+            foreground_color = RED
+        elif 75 <= int(self.battery) <= 100:
+            foreground_color = GREEN
+        elif 31 <= int(self.battery) <= 74:
+            foreground_color = YELLOW
+        elif 0 <= int(self.battery) <= 30:
+            foreground_color = RED
+        else:
+            foreground_color = RED
         self.tray_icon.SetIcon(create_icon(self.battery, foreground_color, font), "No Mouse Detected" if self.battery == "-" else MODEL)
 
     def thread_worker(self):
