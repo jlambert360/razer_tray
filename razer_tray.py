@@ -24,7 +24,7 @@ GREEN = (71, 255, 12)
 YELLOW = (255, 255, 0)
 
 # Settings
-poll_rate = 30
+poll_rate = 120
 foreground_color = GREEN
 backgroung_color = (0, 0, 0, 0)
 font = "consola.ttf"

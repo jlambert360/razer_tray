@@ -39,7 +39,7 @@ TRAN_ID = b"\x1f"            # transaction_id.id for your mouse
 
 ## Settings
 You can modify these settings variables:
-1. `poll_rate` in seconds - how often battery charge is read. 30 sec by default.
+1. `poll_rate` in seconds - how often battery charge is read. 120 sec by default.
 2. `foreground_color` - color of indicator text. Tuple with RGB data.
 3. `backgroung_color` - color of indicator background. Transparent by default (0, 0, 0, 0).
 4. `font` - indicator font.
