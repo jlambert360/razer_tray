@@ -27,7 +27,7 @@ YELLOW = (255, 255, 0)
 poll_rate = 120
 foreground_color = GREEN
 backgroung_color = (0, 0, 0, 0)
-font = "consola.ttf"
+font = "segoeuib.ttf"
 
 logging.basicConfig(level=logging.INFO)
 
@@ -125,11 +125,11 @@ def create_icon(text: str, color, font):
 
     def get_text_pos_size(text):
         if len(text) == 3:
-            return (0, 28), 80
+            return (-5, 1), 80
         elif len(text) == 2:
-            return (4, 16), 110
+            return (4, -16), 110
         elif len(text) == 1:
-            return (34, 16), 110
+            return (34, -16), 110
 
     image = Image.new(mode="RGBA", size=(128, 128), color=backgroung_color)
     # Call draw Method to add 2D graphics in an image
