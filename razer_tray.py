@@ -25,6 +25,7 @@ YELLOW = (255, 255, 0)
 
 # Settings
 poll_rate = 120
+poll_rate_sleep = 5
 foreground_color = GREEN
 backgroung_color = (0, 0, 0, 0)
 font = "segoeuib.ttf"
@@ -206,9 +207,12 @@ class MyFrame(wx.Frame):
 
     def thread_worker(self):
         while True:
-            time.sleep(poll_rate)
-            self.show_battery()
-
+            if any(char.isdigit() for char in self.battery) == False:
+                time.sleep(poll_rate_sleep)
+                self.show_battery()
+            else:
+                time.sleep(poll_rate)
+                self.show_battery()
 
 class MyApp(wx.App):
 
