@@ -24,7 +24,7 @@ GREEN = (71, 255, 12)
 YELLOW = (255, 255, 0)
 
 # Settings
-poll_rate = 120
+poll_rate = 600
 poll_rate_sleep = 5
 foreground_color = GREEN
 backgroung_color = (0, 0, 0, 0)
@@ -213,6 +213,7 @@ class MyFrame(wx.Frame):
             else:
                 time.sleep(poll_rate)
                 self.show_battery()
+
 
 class MyApp(wx.App):
 
